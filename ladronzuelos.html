@@ -12,59 +12,108 @@
     <h1>Los ladronzuelos de bicicletas</h1>
     <form action="" method="POST/GET">
         <fieldset>
-            <label for="fecha">Día:</label>
-            <input type="date" id="fecha" name="fecha">
-            <br><br>
-            <label for="hora">Hora:</label>
-            <input type="time" id="hora" name="hora">
-            <br><br>
-            <label for="color">Color:</label>
-            <input type="color" id="color" name="color"><br>
+            <div>
+                <label for="fecha">Día:</label>
+                <input type="date" id="fecha" name="fecha" autofocus tabindex="1">
+            </div>
             <br>
-            <label for="rango-precio">Rango de precio:</label>
-            <input type="range" id="rango-precio" name="rango-precio" min="50" max="3000" step="50">
-            <br><br>
+            <div>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora">
+            </div>
+            <br>
+            <div>
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color">
+            </div>
+            <br>
+            <div>
+                <label for="rango-precio">Rango de precio:</label>
+                <input type="range" id="rango-precio" name="rango-precio" min="50" max="3000" step="50">
+            </div>
+            <br>
             <fieldset>
                 <legend>Tipo de bicicleta:</legend>
                 <br>
+                <div>
+                    <label for="paseo">Paseo</label>
+                    <select id="paseo" name="paseo">
+                        <option value="señorial">Señorial</option>
+                        <option value="antiplebeyos">Anti-plebeyos</option>
+                        <option value="porencimadelhombro">Por encima del hombro</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="montaña">Montaña</label>
+                    <select id="montaña" name="montaña">
+                        <option value="gamusinos">Gamusinos</option>
+                        <option value="hueleflores">Huelelores premium</option>
+                        <option value="fangolover">Fango lover</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <label for="carreras">Carreras</label>
+                    <select id="carreras" name="carreras">
+                        <option value="metroymedio">Metro y medio</option>
+                        <option value="fluorescente">3 de la tarde. Fluorescente edition</option>
+                        <option value="grupitors">Grupitors</option>
+                    </select>
+                </div>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Accesorios</legend>
+                <label for="accesorios"></label>
+                <select id="accesorios" name="accesorios" size="6" multiple>
+                    <option value="ruedines">Ruedines</option>
+                    <option value="pegatinas">Pegatinas</option>
+                    <option value="cestita">Cestita</option>
+                    <option value="bombaire">Bomba de aire</option>
+                    <option value="timbre">Timbre</option>
+                    <option value="foco">Foco</option>
+                </select>
 
-                <div>
-                    <label for="selector">Paseo</label>
-                    <select id="selector" name="selector">
-                        <option value="opcion1">Señorial</option>
-                        <option value="opcion2">Anti-plebeyos</option>
-                        <option value="opcion3">Por encima del hombro</option>
-                    </select>
-                </div>
-                <br>
-                <div>
-                    <label for="selector">Montaña</label>
-                    <select id="selector" name="selector">
-                        <option value="opcion1">Gamusinos</option>
-                        <option value="opcion2">Huelelores premium</option>
-                        <option value="opcion3">Fango lover</option>
-                    </select>
-                </div>
-                <br>
-                <div>
-                    <label for="selector">Carreras</label>
-                    <select id="selector" name="selector">
-                        <option value="opcion1">Metro y medio</option>
-                        <option value="opcion2">3 de la tarde. Fluorescente edition</option>
-                        <option value="opcion3">Grupitors</option>
-                    </select>
-                </div>
             </fieldset>
             <fieldset>
-                <label for="selector-multiple">Seleccione una o varias opciones:</label>
-                <select id="selector-multiple" name="selector-multiple" multiple>
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                    <option value="opcion3">Opción 3</option>
-                    <option value="opcion4">Opción 4</option>
-                </select>
+                <legend>¿Qué marca era?</legend>
+                <ul>
+                    <li>Specialized</li>
+                    <li>Trek</li>
+                    <li>Merida</li>
+                    <li>Scott</li>
+                    <li>Giant</li>
+                    <li>Cube</li>
+                    <li>Lapierre</li>
+                    <li>Orbea</li>
+                    <li>Cannondale</li>
+                    <li>Bmc</li>
+                    <li>Canyon</li>
+                    <li>Look</li>
+                    <li>Protek</li>
+                    <li>Megamo</li>
+                    <li>Pinarello</li>
+                    <li>Bianchi</li>
+                    <li>Bh</li>
+                    <li>Factor</li>
+                    <li>Ghost</li>
+                    <li>Cervélo</li>
+                    <li>Argon</li>
+                </ul>
+                <div>
+                    <textarea id="marca" name="marca" rows="1" cols="11" placeholder="Marca" maxlength="11"
+                        autofocus></textarea>
+
+                </div>
+
+
+
+
+
             </fieldset>
 
+
         </fieldset>
 
 
@@ -72,16 +121,7 @@
 
 
 
-        <fieldset>
-            <legend>
-                <h4>Tus circunstancias:</h4>
-            </legend>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required tabindex="8"><br>
-            <br>
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required tabindex="9">
-        </fieldset>
+
         <br>
         <input type="submit" value="Enviar" tabindex="10">
         <br><br>
